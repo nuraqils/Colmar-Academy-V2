@@ -1,0 +1,463 @@
+/* Universal Styles */
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+p {
+
+  color: #989898;
+}
+
+a {
+  /* removes the underline */
+  text-decoration: none;
+
+  /* follows the parent color */
+  color: inherit;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  /* padding-bottom: 1rem; */
+  /* text-align: center; */
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4f4f4f;
+}
+
+strong {
+  color: #01161E
+}
+
+.logo span {
+  color: #9f9b9b
+}
+
+
+
+.forMedia img,
+.forMedia video {
+  /* display: block; */
+
+  /* to fill up the div container */
+  width: 100%;
+}
+
+/* Universal Component - Flex Content Container */
+
+.flex-container {
+  display: flex;
+  /* padding: 0 24px; */
+}
+
+.mainInfo {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 32px;
+}
+
+/* Universal Component - Content Image Box */
+
+.contentImg {
+  display: flex;
+  padding: 16px 16px;
+}
+
+/* first picture to align with the big picture thus no padding required */
+.contentImg:first-child {
+  padding-top: 0;
+}
+
+/* last picture dont need anrmore padding */
+.contentImg:last-child {
+  padding-bottom: 0;
+}
+
+.contentImg .forMedia {
+  width: 35%;
+}
+
+.contentImg .sectText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 16px;
+}
+
+.contentImg h3 {
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+
+.contentImg p {
+  padding-bottom: 5px;
+}
+
+/* this hides the mobile img version in desktop screen resolution */
+.contentImg .responsive {
+  display: none;
+}
+
+
+
+
+/* Header */
+
+header {
+  padding: 16px 24px;
+}
+
+header .desktop {
+  display: flex;
+  /* align-items: center; */
+  
+}
+
+header .logo {
+
+  /* to assign the div the remaining space of this flex area  */
+  flex-grow: 1;
+
+  /* flex here so that logo img and h5 can be side by side */
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+
+}
+
+header li {
+
+  /* to display in one line while ignoring height and width properties */
+  display: inline;
+  padding-right: 16px;
+}
+
+header li:last-child {
+  /* dont need additional padding as margin on the .desktop div has alr been set to follow specs given */
+  padding-right: 0;
+}
+
+
+/* hides this in desktop resolution */
+header .responsive {
+  display: none;
+}
+
+
+
+/* Banner */
+
+#banner {
+  background-color: #c4c2c2;
+}
+
+#banner .content {
+  justify-content: center;
+  
+}
+
+#banner h1, #banner h4 {
+  padding-bottom: 16px;
+  
+}
+
+
+
+#banner a {
+  padding: 8px;
+  background-color: #515151;
+  text-align: center;
+  color: white;
+  width: 60%;
+}
+
+
+/* Information */
+
+#information-section .mainInfo h2 {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+
+
+/* Courses */
+
+#courses-section {
+  padding: 32px 72px;
+  background-color: #e1dfdf;
+}
+
+.courses-row {
+  display: flex;
+}
+
+.course {
+  /* set the length of the flex items equally */
+  flex-basis: 33%;
+  margin: 32px 32px;
+  background-color: white;
+}
+
+.course .sectText {
+  padding: 16px 0px 24px 16px;
+}
+
+
+.course p  {
+  padding-bottom: 16px;
+}
+#courses-section h2 {
+  text-align: center;
+
+}
+
+.course h4 {padding-bottom: 5px;}
+
+
+
+/* Thesis */
+
+#thesis-section {
+  padding: 32px 0px;
+}
+
+#thesis-section h2 {
+  text-align: center;
+
+}
+
+#thesis-section .mainInfo {
+  padding-bottom: 0;
+}
+
+#thesis-section .mainInfo h3 {
+padding-top: 24px;
+padding-bottom: 15px;
+
+}
+
+
+
+#thesis-section h3 {
+  /* to give a little of space between h3 and p and make it align */
+  padding: 5px 0px;
+}
+
+
+
+/* Line before footer */
+
+.line{
+  width: 100%;
+  height: 5px;
+  border-bottom: 1px solid grey;
+  }
+
+/* Footer */
+
+footer {
+  display: flex;
+  padding: 16px;
+  padding-left: 24px;
+  color: rgb(112, 112, 112);
+}
+
+footer .copyright {
+
+  /* to seperate it from the <a> tag. to assign the span the remaining space of this flex area  */
+  flex-grow: 1;
+}
+
+footer a {
+  margin-right: 5px;
+}
+
+footer a:last-child {
+  margin-right: 0;
+}
+
+/* Universal mobile version*/
+@media screen and (max-width: 720px) {
+
+  /* hides the desktop images */
+  .contentImg .desktop {
+    display: none;
+  }
+
+  /* displays the image in one line takes whole width */
+  .contentImg .responsive {
+    display: block;
+
+  }
+
+  
+/* div takes the full width  */
+  .contentImg .forMedia {
+    width: 100%;
+  }
+}
+
+/* header mobile version */
+@media screen and (max-width: 720px) {
+
+  
+  header .desktop {
+    display: none;
+  }
+
+  header .responsive {
+    display: block;
+    width: 100%;
+  }
+
+  header .responsive ul {
+    display: flex;
+    /* distribute space evenly among all */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+}
+
+/* banner mobile version */
+@media screen and (max-width: 720px) {
+  #banner {
+    flex-direction: column;
+    
+  }
+
+  #banner .mainInfo {
+    /* make it too 100% width */
+    width: auto;
+    padding: 0;
+  }
+
+  #banner .content {
+    
+    width: auto;
+    padding: 32px;
+    align-items: center;
+  }
+}
+
+/* information mobile version */
+
+@media screen and (max-width: 720px) {
+ 
+
+  #information-section .mainInfo {
+    display: none;
+  }
+
+  #information-section .content {
+    width: 100%;
+    
+  }
+
+  #information-section .content .contentImg {
+    flex-direction: column;
+  }
+
+  
+  #information-section .sectText {
+    padding-top: 16px;
+  }
+}
+
+/* course mobile version */
+
+@media screen and (max-width: 720px) {
+  #courses-section {
+    padding: 32px 72px;
+    /* use the same color as the parent (body) */
+    background-color: inherit;
+  }
+
+  .course h4 {
+    text-align: center;
+  }
+
+  .courses-row {
+    flex-direction: column;
+  }
+
+  .course {
+    margin: 16px;
+  }
+
+  .course .sectText {
+    background-color: #e1dfdf;
+    padding: 16px;
+  }
+
+  .course .forMedia,
+  .course p {
+    display: none;
+  }
+}
+
+/* thesis mobile version */
+
+@media screen and (max-width: 720px) {
+
+  #thesis-section .mainInfo h3,
+  #thesis-section .mainInfo p,
+  #thesis-section .content {
+    display: none;
+  }
+
+  
+
+  #thesis-section h2 {
+    padding-bottom:32px;
+  
+  }
+
+  
+
+  #thesis-section .mainInfo {
+    width: 100%;
+    padding: 0;
+  }
+}
